@@ -1,0 +1,66 @@
+.modal-window
+    display: flex
+    justify-content: center
+    align-items: center
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 100
+    width: 100vw
+    height: 100vh
+    background: rgba(0, 0, 0, 0.85)
+    color: #fff
+    &__content
+        width: 50vw
+        height: 80vh
+        background: #fff
+        color: #000
+        position: relative
+    &__close-window
+        right: -50px
+        top: -30px
+        width: 30px
+        height: 30px
+        position: absolute
+        cursor: pointer
+        &::after, &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 0
+            width: 100%
+            height: 3px
+            background: #bbfe10
+            transform: rotate(-45deg) translateY(-50%)
+        &::before
+            transform: rotate(45deg) translateY(-50%)
+    &__inner
+        height: 100%
+        width: 100%
+        display: flex
+    &__img
+        width: 30%
+        img
+            max-width: 100%
+            height: 100%
+            object-fit: cover
+    &__info
+        width: 70%
+        hr
+            width: 80%
+            margin: 0 auto
+    &__title
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100px
+    &__text
+        margin: 0 auto
+        width: 90%
+        font-size: 20px
+        line-height: 25px
+        margin-top: 50px
+    &__text::first-letter
+        padding-left: 10px
+        text-transform: uppercase
+        

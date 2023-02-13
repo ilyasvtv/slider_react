@@ -1,0 +1,75 @@
+@import ../../variables/colors
+
+.slider-section
+    height: 800px
+    background: $main-background
+    &__title
+        font-size: 68px
+        text-align: center
+        font-weight: 100
+        padding: 25px 0
+        color: #fff
+
+    .slider
+        margin: 0 auto
+        display: flex
+        width: 80%
+        height: 480px
+        &__right-button
+            transform: scaleX(-1)
+        &__left-button, &__right-button
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 5%
+            .circle
+                position: absolute
+                height: auto
+                width: 80%
+                cursor: pointer
+                &:hover
+                    .animated-border
+                        stroke-dashoffset: -260
+                svg
+                    stroke: #544d4d56
+                .animated-border
+                    stroke: #fff
+                    stroke-dasharray: 130
+                    stroke-dashoffset: -130
+                    transition: stroke-dashoffset 0.8s ease
+                .arrow
+                    width: 100%
+                    height: 100%
+                    top: 0
+                    position: absolute
+                    svg line
+                        stroke: #fff !important
+        &__body
+            width: 90%
+            height: 100%
+            overflow: hidden
+        &__inner
+            display: flex
+            // width: 150%
+            // left: -25%
+            height: 100%
+            background: #000
+            position: relative
+            // transition: transform 0.3s
+            // transition: 0.3s ease
+            // transform: translate3d(0px, 0px, 0px)
+        &__item
+            display: flex
+            justify-content: center
+            font-size: 100px
+            width: 20%
+            height: 100%
+            transition: 0.3s ease
+            transform: translate3d(0px, 0px, 0px)
+            cursor: pointer
+            color: #fff
+            // border: 1px solid #fff
+            .item-img
+                width: 100%
+                object-fit: cover
