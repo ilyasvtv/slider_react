@@ -30,7 +30,9 @@ export default function Slider() {
             return;
         };
         //responsivness of slider
-        setSliderOffset(getComputedStyle(sliderRef.current.children[0]).width);
+        setTimeout(() => {
+            setSliderOffset(getComputedStyle(sliderRef.current.children[0]).width);
+        }, 100)
         addEventListener("resize", () => {
             setSliderOffset(getComputedStyle(sliderRef.current.children[0]).width);
         })
